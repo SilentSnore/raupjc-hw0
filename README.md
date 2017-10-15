@@ -2,3 +2,5 @@
 Nakon dodavanja class library reference u Debug folderu se pojavljuje ClassLibrary.dll datoteka. Aplikacija se ruši uz FileNotFoundException zato jer pokušavamo pozvati metodu MyConsole klase za koju neznamo gdje joj se nalazi aseblij, tj. CLR od GAC-a ne dobiva tu informaciju. Poslao bih ConsoleApp.exe i ClassLibrary.dll datoteke.
 #2
 Aplikacija je koristila staru verziju ClassLibrary aseblija zato jer nismo buildali solution.
+#3
+Tijekom build procesa NuGet je ponovno preuzeo NodaTime pakete, te se ponovno stvorio direktorij NodaTime unutar packages direktorija u solutionu.
